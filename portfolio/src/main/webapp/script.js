@@ -34,3 +34,13 @@ async function addRandomText() {
     const randomText = document.getElementById('random-text');
     randomText.innerText = textFromResponse;
 }
+
+async function addFacts() {
+    const responseFromServer = await fetch("/facts");
+    const textFromResponse = await responseFromServer.json();
+
+    const fact = textFromResponse[Math.floor(Math.random() * textFromResponse.length + 1)]
+
+    const randomFact = document.getElementById('random-fact');
+    randomFact.innerHTML = fact;
+}
