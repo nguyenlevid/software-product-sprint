@@ -75,8 +75,31 @@
             <p>Click here to get a random fact about me:</p>
             <button onclick="addFacts()">Fax</button>
             <div id="random-fact"></div>
+
+            <h1>Contact form</h1>
+
+            <form action="/contact" id="contactForm" method="POST">
+        
+              <p>Enter your contact information:</p>
+              <textarea name="first-name" placeholder="First Name"></textarea>
+              <br/><br/>
+
+              <textarea name="last-name" placeholder="Last Name"></textarea>
+              <br/><br/>
+
+              <textarea name="age" type="number" placeholder="Age"></textarea>
+              <br/><br/>
+
+              <textarea name="email" placeholder="Email"></textarea>
+              <br/><br/>
+
+              <input type="submit" onclick="addContact();"/>
+            </form>
         </ul>
 
     </div>
+
+    <p>Your contact appears in the system as: </p>
+    <div id="contact-container"></div>
   </body>
 </html>
