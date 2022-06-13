@@ -49,6 +49,7 @@ async function addContact() {
     const responseFromServer = await fetch("/contact");
     const textFromResponse = await responseFromServer.text();
 
+    console.log(textFromResponse);
     const contact = document.getElementById('contact-container');
     contact.innerHTML = textFromResponse;
 

@@ -13,17 +13,15 @@ public class ContactServlet extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
     
         // Get the input from the form
-        String firstName = getParameter(request, "first-name", "John");
-        String lastName = getParameter(request, "last-name", "Doe");
-        String age = getParameter(request, "age", "null");
+        String firstName = getParameter(request, "name", "John");
         String email = getParameter(request, "email", "null");
+        String message = getParameter(request, "message", "No message");
 
         response.setContentType("text/html;");
         response.getWriter().print("First name: " + firstName + "\n" +
-                                    "Last name: " + lastName + "\n" +
-                                    "Age: " + age + "\n" +
-                                    "Email: " + email );
-        response.sendRedirect("/");
+                                    "Email: " + email + "\n" +
+                                    "Message: " + message);
+        response.sendRedirect("/pages/contact.html");
     }
 
   private String getParameter(HttpServletRequest request, String name, String defaultValue) {

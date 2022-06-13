@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Viet Nguyen: Contact</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../script.js"></script>
+  </head>
+  <body>
+      <div id="wrap">
+        <div id="top">
+            <img src="../images/banner.png" alt="Viet Nguyen Banner" title="Viet Nguyen Banner"/>
+            <div id="menu">
+                <br>
+                <ul>
+                    <li>
+                        <a href="../">home</a>
+                    </li>
+                    <li>
+                        <a href="projects.html">projects</a>
+                    </li>
+                    <li>
+                        <a href="tools.html">tools</a>
+                    </li>
+                    <li>
+                        <a href="hobbies.html">hobbies</a>
+                    </li>
+                    <li>
+                        <a href="cv.html">CV</a>
+                    </li>
+                    <li>
+                        <a href="./" class="current">contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="content">
+            <h2>Contact:</h2>
+            <div class="left">
+                <h3>Contact me via Social Media:</h3>
+                <ul>
+                    <li>
+                        <p><strong>LinkedIn: </strong><a href="https://www.linkedin.com/in/viet-nguyen-us/">linkedin.com/in/viet-nguyen-us/</a></p>
+                    </li>
+                    <li>
+                        <p><strong>Github: </strong><a href="https://github.com/nguyenlevid">github.com/nguyenlevid</a></p>          
+                    </li>
+                </ul>
+                
+                <div class="clear"></div>
+
+                <h3>Otherwise...</h3>
+                <p class="intro">
+                    Drop me a line in case you are interested in talking about work, hobbies, coding and life!
+                </p>
+                <br/>
+    
+                <form action="/contact" id="contactForm" method="POST">
+                  <input name="name" placeholder="Full Name"/>
+                  <br/><br/>
+
+                  <input name="email" placeholder="Email"/>
+                  <br/><br/>
+
+                  <textarea name="message" rows="8" placeholder="[your message here]" style="width:100%"></textarea>
+                    <br/>
+    
+                  <input type="submit" onclick="addContact();"/>
+                </form>
+                <div id="contact-container"></div>
+                <br />
+                <p>
+                    Or you can always email me: <a href="mailto:vietnguyen19@augustana.edu">vietnguyen19@augustana.edu</a>
+                </p>
+            </div>
+            <div class="right">
+                <img src="../images/meo.jpg" class="photographyImg" alt="Meo Cat" title="My cat - Meo Meo" />
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="footer">
+            <p>Copyright &copy; 2022 <a href="mailto:vietnguyen19@augustana.edu">Viet Nguyen</a></p>
+        </div>
+      </div>
+  </body>
+</html>
