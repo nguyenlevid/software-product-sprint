@@ -114,12 +114,14 @@ blockquote{
 	margin: 0;
 	padding-left: 10px; 
 	list-style: none;
+    width: 750px;
 }
 
 #menu li {
 	display: block;
 	float: left;
 	white-space: nowrap;
+    width: 16%;
 }
 
 #menu li a {
@@ -128,6 +130,7 @@ blockquote{
 	text-decoration: none;
 	border-bottom: none;
 	color: #507ceb;
+    text-align: center;
 }
 
 * html #menu a {width:1%;}
