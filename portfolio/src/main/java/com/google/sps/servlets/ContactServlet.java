@@ -21,7 +21,7 @@ public class ContactServlet extends HttpServlet {
         response.getWriter().print("First name: " + firstName + "\n" +
                                     "Email: " + email + "\n" +
                                     "Message: " + message);
-        response.sendRedirect("/pages/contact.html");
+        response.sendRedirect("/pages/thankyou.html");
     }
 
   private String getParameter(HttpServletRequest request, String name, String defaultValue) {

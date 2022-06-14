@@ -50,7 +50,7 @@ a:hover {
 }
 
 blockquote{
-	background: #E7FDFD;
+	background: #455cdd;
 	color: #606060;
 	padding: 10px;
 }
@@ -72,6 +72,7 @@ blockquote{
 	color: #fff;
 	background: #000 url(images/top_bg.gif);
 	overflow:hidden; 
+    text-align: justify;
 }
 
 #top h2 {
