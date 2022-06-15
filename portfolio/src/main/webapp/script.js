@@ -26,3 +26,34 @@ function addRandomGreeting() {
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
+
+async function addRandomText() {
+    const responseFromServer = await fetch("/hello");
+    const textFromResponse = await responseFromServer.text();
+
+    const randomText = document.getElementById('random-text');
+    randomText.innerText = textFromResponse;
+}
+
+async function addFacts() {
+    const responseFromServer = await fetch("/facts");
+    const textFromResponse = await responseFromServer.json();
+
+    const fact = textFromResponse[Math.floor(Math.random() * textFromResponse.length)];
+
+    const randomFact = document.getElementById('random-fact');
+    randomFact.innerHTML = fact;
+}
+
+async function addContact() {
+    const responseFromServer = await fetch("/contact");
+    const textFromResponse = await responseFromServer.text();
+
+    const contact = document.getElementById('contact-container');
+    contact.innerHTML = textFromResponse;
+
+    // stop page from reloading
+    var form = document.getElementById("contactForm");
+    function handleForm(event) { event.preventDefault(); } 
+    form.addEventListener('submit', handleForm);
+}

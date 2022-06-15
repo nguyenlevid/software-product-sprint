@@ -65,11 +65,41 @@
                     </li>
                 </ul>
             </li>
-            <p>Click here to get a random message:</p>
+            <!-- <p>Click here to get a random message:</p>
             <button onclick="addRandomGreeting()">Hello</button>
-            <div id="greeting-container"></div>
+            <div id="greeting-container"></div> -->
+            <p>Click here to get a random text:</p>
+            <button onclick="addRandomText()">Motivational Text</button>
+            <div id="random-text"></div>
+            <p>Click <a href="/hello">here</a> to see the server response directly.</p>
+            <p>Click here to get a random fact about me:</p>
+            <button onclick="addFacts()">Fax</button>
+            <div id="random-fact"></div>
+
+            <h1>Contact form</h1>
+
+            <form action="/contact" id="contactForm" method="POST">
+        
+              <p>Enter your contact information:</p>
+              <textarea name="first-name" placeholder="First Name"></textarea>
+              <br/><br/>
+
+              <textarea name="last-name" placeholder="Last Name"></textarea>
+              <br/><br/>
+
+              <textarea name="age" type="number" placeholder="Age"></textarea>
+              <br/><br/>
+
+              <textarea name="email" placeholder="Email"></textarea>
+              <br/><br/>
+
+              <input type="submit" onclick="addContact();"/>
+            </form>
         </ul>
 
     </div>
+
+    <p>Your contact appears in the system as: </p>
+    <div id="contact-container"></div>
   </body>
 </html>
