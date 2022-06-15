@@ -46,15 +46,16 @@ async function addFacts() {
 }
 
 async function addContact() {
-    const responseFromServer = await fetch("/contact");
-    const textFromResponse = await responseFromServer.text();
-
-    console.log(textFromResponse);
-    const contact = document.getElementById('contact-container');
-    contact.innerHTML = textFromResponse;
-
     // stop page from reloading
     var form = document.getElementById("contactForm");
     function handleForm(event) { event.preventDefault(); } 
     form.addEventListener('submit', handleForm);
+
+    const responseFromServer = await fetch("/contact-form");
+    const textFromResponse = await responseFromServer.text();
+
+    // console.log(textFromResponse);
+    // const contact = document.getElementById('contact-container');
+    // contact.innerHTML = textFromResponse;
+
 }

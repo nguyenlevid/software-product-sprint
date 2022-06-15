@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Viet Nguyen: Contact</title>
     <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../images/favicon_duck.png">    
     <script src="../script.js"></script>
   </head>
   <body>
@@ -20,7 +21,7 @@
                         <a href="projects.html">projects</a>
                     </li>
                     <li>
-                        <a href="tools.html">tools</a>
+                        <a href="tools.html">activities</a>
                     </li>
                     <li>
                         <a href="hobbies.html">hobbies</a>
@@ -55,7 +56,7 @@
                 </p>
                 <br/>
     
-                <form action="/contact" id="contactForm" method="POST">
+                <form action="/contact-form" onsubmit="addContact();" id="contactForm" method="POST">
                   <input name="name" placeholder="Full Name"/>
                   <br/><br/>
 
@@ -65,7 +66,7 @@
                   <textarea name="message" rows="8" placeholder="[your message here]" style="width:100%"></textarea>
                     <br/>
     
-                  <input type="submit" onclick="addContact();"/>
+                  <input type="submit"/>
                 </form>
                 <div id="contact-container"></div>
                 <br />

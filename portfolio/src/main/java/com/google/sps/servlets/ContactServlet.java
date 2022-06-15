@@ -7,22 +7,28 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/contact")
+@WebServlet("/contact-form")
 public class ContactServlet extends HttpServlet {
+    private String name;
+    private String email;
+    private String message;
+
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
     
         // Get the input from the form
-        String firstName = getParameter(request, "name", "John");
-        String email = getParameter(request, "email", "null");
-        String message = getParameter(request, "message", "No message");
+        name = getParameter(request, "name", "John Doe");
+        email = getParameter(request, "email", "null@null.com");
+        message = getParameter(request, "message", "No message");
 
         response.setContentType("text/html;");
-        response.getWriter().print("First name: " + firstName + "\n" +
+        response.getWriter().print("Name: " + name + "\n" +
                                     "Email: " + email + "\n" +
                                     "Message: " + message);
+
         response.sendRedirect("/pages/thankyou.html");
     }
+
 
   private String getParameter(HttpServletRequest request, String name, String defaultValue) {
       String value = request.getParameter(name);
