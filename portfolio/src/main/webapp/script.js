@@ -46,14 +46,47 @@ async function addFacts() {
 }
 
 async function addContact() {
-    const responseFromServer = await fetch("/contact");
-    const textFromResponse = await responseFromServer.text();
-
-    const contact = document.getElementById('contact-container');
-    contact.innerHTML = textFromResponse;
-
     // stop page from reloading
     var form = document.getElementById("contactForm");
     function handleForm(event) { event.preventDefault(); } 
     form.addEventListener('submit', handleForm);
+
+    const responseFromServer = await fetch("/contact-form");
+    const textFromResponse = await responseFromServer.text();
+
+    // console.log(textFromResponse);
+    // const contact = document.getElementById('contact-container');
+    // contact.innerHTML = textFromResponse;
+
 }
+
+
+async function addComment() {
+
+    const responseFromServer = await fetch("/comment-list", {
+        headers : { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+         }}
+        );
+    const comments = await responseFromServer.json();
+    
+    console.log(comments);
+
+    const commentListElement = document.getElementById('comment-list-container');
+    commentListElement.innerHTML = '';
+  
+    for (var i = 0; i < comments.length; i++) {
+        console.log(comments[i]);
+        commentListElement.appendChild(
+            createListElement(comments[i].comment));
+    }
+
+}
+
+/** Creates an <li> element containing text. */
+function createListElement(text) {
+    const liElement = document.createElement('li');
+    liElement.innerText = text;
+    return liElement;
+  }

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Viet Nguyen: Cat</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../images/favicon_duck.png">
+    <script src="../script.js"></script>
+  </head>
+  <body>
+      <div id="wrap">
+        <div id="top">
+            <img src="../images/banner.png" alt="Viet Nguyen Banner" title="Viet Nguyen Banner" style="width: 750px;"/>
+            <div id="menu">
+                <br>
+                <ul>
+                    <li>
+                        <a href="../">home</a>
+                    </li>
+                    <li>
+                        <a href="projects.html">projects</a>
+                    </li>
+                    <li>
+                        <a href="tools.html">activities</a>
+                    </li>
+                    <li>
+                        <a href="hobbies.html">hobbies</a>
+                    </li>
+                    <li>
+                        <a href="cv.html">CV</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="content">
+            
+            <div class="left">
+                <h2>Those are comments on the cuteness of my cat. Have a good day!</h2>
+                <button onclick="addComment();">See comments</button>
+                <ul id="comment-list-container"></ul>
+            </div>
+
+            <div class="right">
+                <img src="../images/meomeo.jpg" class="photographyImg" alt="Meo Meo">
+                <div style="margin-left: 50px;">
+                    <p>Make a comment.</p>
+                    <form action="/comment-form" id="commentForm" method="POST">
+    
+                        <textarea name="comment" required rows="4" placeholder="[your comment here]" style="width:100%"></textarea>
+                          
+                        <br/>
+                        <input type="submit"/>
+                    </form>
+                </div>
+
+            </div>
+          
+            <div class="clear"></div>
+        </div>
+        <div id="footer">
+            <p>Copyright &copy; 2022 <a href="mailto:vietnguyen19@augustana.edu">Viet Nguyen</a></p>
+        </div>
+      </div>
+  </body>
+</html>

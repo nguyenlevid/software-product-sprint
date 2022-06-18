@@ -1,14 +1,311 @@
-#content {
-  margin-left: auto;
-  margin-right: auto;
-  width: 650px;
+body {
+	margin: 0px;
+	background: url(images/top_bg.gif);
+	background-repeat: repeat-x;
+	font-family: Verdana, Arial, sans-serif;
+        font-size: .8em;
 }
 
-#greeting-container {
-  margin-top: 20px;
-}
+
+
 .photographyImg {
-    height: 50%;
-    width: 50%;
-    object-fit: cover;
+    height: 300px;
+    width: 280px;
+}
+
+p {
+	line-height: 17px;
+	margin: 11px 0 10px 0;
+	padding: 0px;
+}
+
+h2 {
+	color: #507ceb;
+	margin:0px;
+	padding:0px;
+	font-size: 15px;
+}
+
+h3 {
+	color: #507ceb;
+	margin:0px;
+	padding:0px;
+	font-size: 13px;
+}
+
+ul {
+	font-size: 1.0em;
+	margin:0;
+	padding:0;
+	list-style-image: url(images/bullet.gif);
+}
+
+a {
+	color: #507ceb;
+	text-decoration: none;
+	border-bottom: 1px dotted;	
+}
+
+a:hover {
+	color: #507ceb;
+	text-decoration: none;
+}
+
+blockquote{
+	background: #455cdd;
+	color: #606060;
+	padding: 10px;
+}
+
+/** Wrap **/
+
+#wrap {
+  margin-left: auto;
+  margin-right: auto;
+  width: 750px;
+}
+
+
+/**** Top ***/
+
+#top {
+	width: 100%;
+	height: 108px;
+	color: #fff;
+	background: #000 url(images/top_bg.gif);
+	overflow:hidden; 
+    text-align: justify;
+}
+
+#top h2 {
+	color: #226ec5;
+	letter-spacing: 3px;
+	font-size: 1.8em;
+	font-weight: normal;
+	position: relative;
+	margin: 0px;
+	top:33px;
+	display:block;
+	float:left;
+	padding-left: 55px;
+}
+
+#top h2 a {
+	color: #507ceb;
+	text-decoration: none;
+	border-bottom: none;	
+
+}
+
+#top h2 a:hover {
+        color: #EEEEEE;
+}
+
+
+/**** Main Menu ***/
+
+#menu {
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+	position:absolute;
+	top:55px;
+}
+
+#menu ul {
+	margin: 0;
+	padding-left: 10px; 
+	list-style: none;
+    width: 750px;
+}
+
+#menu li {
+	display: block;
+	float: left;
+	white-space: nowrap;
+    width: 16%;
+}
+
+#menu li a {
+	display: block;
+    padding: 5px 20px 5px 20px;
+	text-decoration: none;
+	border-bottom: none;
+	color: #507ceb;
+    text-align: center;
+}
+
+* html #menu a {width:1%;}
+
+#menu li a:hover {
+	color: #3088ee;
+	background: #285454;
+}
+
+#menu li a.current {
+	letter-spacing: 1px;
+	font-weight: bold;
+	color: white;
+}
+
+#menu li a.current:hover {
+	color: #fff;
+	background: black;
+}
+
+/**** Content Container ***/
+
+
+#content {
+	width: 100%;
+	margin-top:30px;
+}
+
+#content h2,h3 {
+	margin: 0;
+	padding: 10px 0 10px 0;
+}
+
+#content ul {
+	padding: 15px 0 15px 35px;
+	margin:0;
+}
+
+#content ul.outline {
+	font-size: 1.0em;
+	margin:0;
+	padding: 0 0 0 35px;
+	list-style-image: url(images/bullet2.gif);
+}
+
+#content ul ul {
+	padding: 0 0 5px 35px;
+	margin:0;
+}
+
+#content li {
+	margin-bottom:5px;
+}
+
+/**** Content ***/
+
+div.full {
+	width: 100%;
+	float: left;
+	display: block;
+    margin-left: 20px;
+	display: inline;
+}
+
+div.left {
+	width: 440px;
+	float: left;
+	display: block;
+    margin-left: 20px;
+	display: inline;
+}
+div.left img {
+	border: solid 5px #e7e7e7;
+}
+
+
+/**** Sidebar ***/
+
+
+div.right {
+	width: 225px;
+	float: right;
+	display:block;
+	margin-top: 10px;
+	text-align:center;
+}
+
+div.right img {
+	border: solid 5px #e7e7e7;
+}
+
+div.right a {
+  border: none;
+}
+
+div.right p a {
+  border-bottom: 1px dotted;
+}
+
+div.right p {
+  margin-top: 0px;
+  text-align: center;
+  font-style: italic;
+}
+
+
+div.right .box {
+	width: 225px;
+	background: #F6FBFB;
+	border: 1px solid #E1E1E1;
+	padding:10px 10px 15px 10px;
+	float: right;
+}
+
+div.left .box {
+	/*width: 225px;*/
+	background: #F6FBFB;
+	border: 1px solid #E1E1E1;
+	padding:10px 10px 15px 10px;
+	/*margin: 5px 0px 10px 0px;*/
+	margin: 10px 10px 20px 10px;
+	float: right;
+}
+
+.box h2 {
+	font-size: 1.1em;
+	margin: 0px 0 0px 0;
+	padding:0px 0 5px 0;
+}
+
+.box a {
+	margin: 10px 0 10px 0;
+	color: #507ceb;
+	font-size: 10px;
+}
+
+.box p {
+	margin: 5px 0 10px 0;
+	line-height: 15px;
+}
+
+.box ul {
+	padding: 0 0 7px 20px;
+	margin:10px 0 10px 0;
+	list-style-image: url(images/bullet2.gif);	
+}
+
+.box li {
+	margin-top:5px;
+}
+/**** Clear Div ***/
+
+div.clear {
+	display: block;
+	clear: both;
+	width: 100%;
+	height:1px;
+	overflow:hidden;
+}
+
+
+/**** Footer ***/
+
+
+#footer {
+	margin: 40px auto 0 auto;
+	text-align: center;
+	border-top: dotted 1px gray;
+	padding: 20px 0 20px 0;
+	width: 70%;
+}
+
+#footer p {
+	margin: 0px;
+	padding: 0;
 }

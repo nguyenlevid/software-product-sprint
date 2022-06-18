@@ -13,31 +13,27 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/contact-form")
-public class ContactServlet extends HttpServlet {
-    private String name;
-    private String email;
-    private String message;
+@WebServlet("/comment-form")
+public class CatCommentServlet extends HttpServlet {
+    private String comment;
 
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
     
         // Get the input from the form
-        name = getParameter(request, "name", "John Doe");
-        email = getParameter(request, "email", "null@null.com");
-        message = getParameter(request, "message", "No message");
+        comment = getParameter(request, "comment", "No message");
+        long timestamp = System.currentTimeMillis();
 
         Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
-        KeyFactory keyFactory = datastore.newKeyFactory().setKind("Contact");
-        FullEntity contactEntity =
+        KeyFactory keyFactory = datastore.newKeyFactory().setKind("Comment");
+        FullEntity commentEntity =
             Entity.newBuilder(keyFactory.newKey())
-                .set("name", name)
-                .set("email", email)
-                .set("message", message)
+                .set("comment", comment)
+                .set("timestamp", timestamp)
                 .build();
-        datastore.put(contactEntity);
+        datastore.put(commentEntity);
 
-        response.sendRedirect("/pages/thankyou.html");
+        response.sendRedirect("/pages/comments.html");
     }
 
 
