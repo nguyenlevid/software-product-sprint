@@ -57,13 +57,13 @@
                 <br/>
     
                 <form action="/contact-form" onsubmit="addContact();" id="contactForm" method="POST">
-                  <input name="name" placeholder="Full Name"/>
+                  <input name="name" required placeholder="Full Name"/>
                   <br/><br/>
 
-                  <input name="email" placeholder="Email"/>
+                  <input name="email" required placeholder="Email"/>
                   <br/><br/>
 
-                  <textarea name="message" rows="8" placeholder="[your message here]" style="width:100%"></textarea>
+                  <textarea name="message" required rows="8" placeholder="[your message here]" style="width:100%"></textarea>
                     <br/>
     
                   <input type="submit"/>
@@ -76,6 +76,12 @@
             </div>
             <div class="right">
                 <img src="../images/meo.jpg" style="width: 230px; height: 260px;" alt="Meo Cat" title="My cat - Meo Meo" />
+                <p style="margin-top: 20px;">
+                    Lots of people commented on my cat's cuteness recently.
+                </p>
+                <p>
+                    See the anonymous comments => <a href="comments.html"><button>here</button></a>
+                </p>
             </div>
             <div class="clear"></div>
         </div>

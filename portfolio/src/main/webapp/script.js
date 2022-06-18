@@ -59,3 +59,34 @@ async function addContact() {
     // contact.innerHTML = textFromResponse;
 
 }
+
+
+async function addComment() {
+
+    const responseFromServer = await fetch("/comment-list", {
+        headers : { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+         }}
+        );
+    const comments = await responseFromServer.json();
+    
+    console.log(comments);
+
+    const commentListElement = document.getElementById('comment-list-container');
+    commentListElement.innerHTML = '';
+  
+    for (var i = 0; i < comments.length; i++) {
+        console.log(comments[i]);
+        commentListElement.appendChild(
+            createListElement(comments[i].comment));
+    }
+
+}
+
+/** Creates an <li> element containing text. */
+function createListElement(text) {
+    const liElement = document.createElement('li');
+    liElement.innerText = text;
+    return liElement;
+  }

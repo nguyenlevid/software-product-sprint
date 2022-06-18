@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Viet Nguyen: Activities</title>
+    <title>Viet Nguyen: Cat</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="icon" href="../images/favicon_duck.png">
     <script src="../script.js"></script>
@@ -21,7 +21,7 @@
                         <a href="projects.html">projects</a>
                     </li>
                     <li>
-                        <a href="./" class="current">activities</a>
+                        <a href="tools.html">activities</a>
                     </li>
                     <li>
                         <a href="hobbies.html">hobbies</a>
@@ -36,10 +36,26 @@
             </div>
         </div>
         <div id="content">
-            <h2>Activities</h2>
+            
             <div class="left">
-                <h1>Coming soon!</h1>
-           
+                <h2>Those are comments on the cuteness of my cat. Have a good day!</h2>
+                <button onclick="addComment();">See comments</button>
+                <ul id="comment-list-container"></ul>
+            </div>
+
+            <div class="right">
+                <img src="../images/meomeo.jpg" class="photographyImg" alt="Meo Meo">
+                <div style="margin-left: 50px;">
+                    <p>Make a comment.</p>
+                    <form action="/comment-form" id="commentForm" method="POST">
+    
+                        <textarea name="comment" required rows="4" placeholder="[your comment here]" style="width:100%"></textarea>
+                          
+                        <br/>
+                        <input type="submit"/>
+                    </form>
+                </div>
+
             </div>
           
             <div class="clear"></div>
